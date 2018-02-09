@@ -1,55 +1,91 @@
-
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <title>Pinterest</title>
 <meta charset="iso-8859-1">
 <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
-
 </head>
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Pinterest</a></h1>
-      <h2>by Jimena Ramírez</h2>
+
+
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="#"><img src="https://sumedico.com/wp-content/uploads/2017/08/gatos-casa1.jpg" /></a>
+      <div class="carousel-caption">
+        <h3>Animales</h3>
+        <p>gato</p>
+      </div>
     </div>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Busqueda:</legend>
-        <input type="text" value="Busca en el sitio&hellip;" onFocus="this.value=(this.value=='Busca en el sitio&hellip;')? '' : this.value ;">
-        <input type="submit" id="sf_submit" value="buscar">
-      </fieldset>
-    </form>
-    <nav>
-      <ul>
-        <li><a href="#">Categorías</a></li>
-        <li><a href="#">Fondos</a></li>
-        <li><a href="#">Dibujos</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-<!-- content -->
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <!-- Slider -->
-
-    <!-- main content -->
-    <div id="intro">
-
+    <div class="item">
+      <a href="#"><img src="https://www.visitmexico.com/sites/default/files/styles/extralarge/public/field/image/2017/01/quintana-roo_destinos-principales_cancun_01.jpg?itok=UbAYwnPc" /></a>
+      <div class="carousel-caption">
+        <h3>Lugares</h3>
+        <p>cancún</p>
+      </div>
     </div>
-
-
-    <!-- / content body -->
+    <div class="item">
+      <a href="#"><img src="https://http2.mlstatic.com/bicicleta-vintage-dama-la-buscada-retro-con-mimbre-D_NQ_NP_568121-MLA20722390209_052016-F.jpg" /></a>
+      <div class="carousel-caption">
+        <h3>Y mucho más...</h3>
+        <p>bicicleta</p>
+      </div>
+    </div>
   </div>
+
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
 </div>
 <!-- Footer -->
 <div class="wrapper row3">
+
   <footer id="footer" class="clear">
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Salma Jimena Ramírez Ramírez</a></p>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <h3 class="footertext">Acerca de mí...</h3>
+            <br>
+              <div class="col-md-4">
+                <center>
+                  <img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
+                  <br>
+                  <h4 class="footertext">Programadora</h4>
+                  <p class="footertext">You can thank all the crazy programming here to this girl.<br>
+                </center>
+              </div>
+              <div class="col-md-4">
+                <center>
+                  <img src="http://oi60.tinypic.com/2z7enpc.jpg" class="img-circle" alt="...">
+                  <br>
+                  <h4 class="footertext">Artista</h4>
+                  <p class="footertext">All the images here are hand drawn by this woman.<br>
+                </center>
+              </div>
+              <div class="col-md-4">
+                <center>
+                  <img src="http://oi61.tinypic.com/307n6ux.jpg" class="img-circle" alt="...">
+                  <br>
+                  <h4 class="footertext">Diseñadora</h4>
+                  <p class="footertext">This pretty site and the copy it holds are all thanks to this girl.<br>
+                </center>
+              </div>
+            </div>
+            <div class="row">
+            <p><center><a href="#">Salma Jimena Ramírez Ramírez</a> <p class="footertext">Copyright &copy; 2018 - All Rights Reserved - </p></center></p>
+             </div>
+            </div>
+</div>
 
   </footer>
-</div>
+
 </body>
 </html>

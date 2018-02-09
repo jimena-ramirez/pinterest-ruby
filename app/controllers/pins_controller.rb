@@ -1,8 +1,18 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, except:[ :index, :show ]
   # GET /pins
   # GET /pins.json
+  def pinsof
+    @user_id = params[:user_id]
+    @user = User.find(@user_id)
+    @pins = @user.pins
+  end
+
+  def mypins
+    @pins = current_user.pins
+  end
+
   def index
     @pins = Pin.all
   end

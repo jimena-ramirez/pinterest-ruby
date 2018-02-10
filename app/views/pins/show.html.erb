@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @pin.name %>
 </p>
 
@@ -11,9 +11,12 @@
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descripción:</strong>
   <%= @pin.description %>
 </p>
+<br>
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+<%= link_to 'Edit', edit_pin_path(@pin), :class=> 'btn btn btn-secondary',:style =>'text-decoration:none' %> |
+<%= link_to 'Back', pins_path, :class=> 'btn btn btn-secondary',:style =>'text-decoration:none' %>
+
+

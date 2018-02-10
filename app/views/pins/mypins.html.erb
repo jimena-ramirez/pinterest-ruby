@@ -1,5 +1,5 @@
-<div class="contanier">
-<h1>Mis Imagenes</h1>
+<h1>Mis Pins</h1>
+<div id="container">
 
   <% @pins.each do |pin| %>
    <div class="col-md-3 d-inline-block" style="width:35%">
@@ -7,12 +7,12 @@
         <%= pin.name %>
         <%= image_tag pin.photo, :class=> 'img-fluid' %>
         <%= pin.description %>
-          <div class="buttons" style="margin-top:10px; margin-bottom:10px">
+          <div class="buttons" style="margin-top:10px; margin-bottom:10px ">
         
-        <%= link_to 'Show', pin, :class=> 'btn' %>
-        <%= link_to 'Edit', edit_pin_path(pin), :class=> 'btn' %>
+        <%= link_to 'Show', pin, :class=> 'btn btn btn-secondary',:style =>'text-decoration:none' %>
+        <%= link_to 'Edit', edit_pin_path(pin), :class=> 'btn btn-secondary' ,:style =>'text-decoration:none' %>
         <% if user_signed_in? %>
-        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn' %>
+        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class=> 'btn btn-secondary', :style =>'text-decoration:none' %>
         <% end %>
           </div>
       </div>
@@ -20,7 +20,9 @@
     <% end %>
 
 <br>
+<br>
+<br>
 <% if user_signed_in? %>
-<%= link_to 'New Pin', new_pin_path %>
+<%= link_to 'New Pin', new_pin_path, :class=> 'btn btn-success', :style =>'text-decoration:none' %>
 <% end %>
 </div>

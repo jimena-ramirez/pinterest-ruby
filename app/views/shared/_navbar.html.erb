@@ -1,33 +1,38 @@
 <div class="bs-component">
               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="<%= root_path %>">Pinterest</a>
+                <a class="navbar-brand " href="<%= root_path %> " style="text-decoration:none">Pinterest</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarColor02">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Nosotros <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" style="text-decoration:none">Nosotros <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="<%= mypins_path %> ">Mis Pins</a>
+                      <a class="nav-link" href="<%= mypins_path %> " style="text-decoration:none">Mis Pins</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="<%= pins_path%>">Pins</a>
+                      <a class="nav-link" href="<%= pins_path%>" style="text-decoration:none">Pins</a>
                     </li>
                   </ul>
-             <div class="collapse navbar-collapse justify-content-end">    
-             <ul class="nav navbar-nav ">
-             <% if current_user.nil? %>
-             <li class="nav-item"><a href="<%= new_user_session_path %>">Ingreso</a></li>
 
-             <li class="nav-item"><a href="<%= new_user_registration_path %>">Registro</a></li>
-             <% else %>
-             <li class="nav-item"><a href="<%= destroy_user_session_path %>" data-method="delete">Salir</a></li>
+
+
+            <div class="collapse navbar-collapse justify-content-end">    
+             <ul class="nav navbar-nav ">
+              <% if current_user.nil? %>
+                <li class="nav-item">
+                  <a class="nav-link" href="<%= new_user_session_path %>" style="text-decoration:none">Ingreso</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<%= new_user_registration_path %>" style="text-decoration:none">Registro</a></li>
+              <% else %>
+                <li class="nav-item">
+                  <a class="nav-link" href="<%= destroy_user_session_path %>" data-method="delete" style="text-decoration:none">Salir</a></li>
              <%end %>
              </ul>
-             </div>
+            </div>
                   
                 </div>
               </nav>
